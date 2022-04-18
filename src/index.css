@@ -155,7 +155,7 @@ button:hover {
   border: 0.15rem solid black;
 }
 .colourBox p {
-  width: 40%;
+  min-width: 40%;
   background-color: white;
   border: 0.15rem solid black;
 }

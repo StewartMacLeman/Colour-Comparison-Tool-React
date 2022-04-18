@@ -22,17 +22,33 @@ const Main = (props) => {
       setBottomBoxText(boxColour);
     }
   }
-  
+
+  const reset = (e) => {
+    let button = e.target.dataset.resetbutton;
+    
+    if (button === "top") {
+      setTopBoxColour("black");
+      setTopBoxText("black");
+      let nextElement = e.target.nextSibling;
+      nextElement.scrollTop = 0;
+    } else if (button === "bottom") {
+      setBottomBoxColour("white");
+      setBottomBoxText("white");
+      let prevElement = e.target.previousSibling;
+      prevElement.scrollTop = 0;
+    }
+  }
+
   return (
     <main className="main">
-      <button className="topButton">Top Reset</button>
+      <button className="topButton" data-resetbutton="top" onClick={reset}>Top Reset</button>
       <ScrollContainerTop colourNames={props.colourNames} updateColourBox={updateColourBox}/>
       <ArrowContainer />
       <ColourBox boxColour={topBoxColour} boxText={topBoxText}/>
       <ColourBox boxColour={bottomBoxColour} boxText={bottomBoxText}/>
       <ArrowContainer />
       <ScrollContainerBottom colourNames={props.colourNames} updateColourBox={updateColourBox}/>
-      <button className="bottomButton">Bottom Reset</button>
+      <button className="bottomButton" data-resetbutton="bottom" onClick={reset}>Bottom Reset</button>
     </main>
   );
 };
