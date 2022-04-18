@@ -2,9 +2,7 @@ html {
   font-size: 16px;
   box-sizing: border-box;
 }
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 :root {
@@ -16,28 +14,14 @@ body {
   height: 98vh;
   margin: 0.5rem auto;
   border: 0.25rem solid black;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
 }
 
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2rem;
-}
-p {
-  font-size: 1.5rem;
-}
-button {
-  font-size: 1.25rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+p { font-size: 1rem; }
+button { font-size: 1rem; }
 
-h1,
-h2,
-p,
-button {
+h1, h2, p, button {
   font-family: tahoma, helvetica, sans-serif;
   text-align: center;
   margin: 0 auto;
@@ -48,7 +32,7 @@ button {
 button {
   background-color: black;
   color: white;
-  border-radius: 8px;
+  border-radius: .5rem;
 }
 button:hover {
   background-color: white;
@@ -61,7 +45,6 @@ button:hover {
   height: 19vh;
   background-color: white;
   border-bottom: 0.25rem solid black;
-  padding-bottom: 0.5rem;
 }
 /* The main container. --------------------------------- */
 .main {
@@ -77,16 +60,12 @@ button:hover {
   padding: 0.15rem;
   width: 50%;
 }
-.main .topButton {
-  margin-bottom: 0.15rem;
-}
-.main .bottomButton {
-  margin-top: 0.15rem;
-}
+.topButton { margin-bottom: .15rem; }
+.bottomButton { margin-top: .15rem; }
 /* The scroll container divs.--------------------------- */
 .scrollContainer {
   width: 100%;
-  height: 20%;
+  height: 21%;
   margin: 0 auto;
   border: 0.15rem solid black;
   background-color: white;
@@ -94,7 +73,7 @@ button:hover {
 }
 .scrollItemDiv {
   width: 100%;
-  height: 2rem;
+  height: 1.45rem;
   border: 0.1rem solid var(--greyBorder);
   display: flex;
   justify-content: center;
@@ -106,8 +85,7 @@ button:hover {
 }
 .scrollItemPara {
   min-width: 40%;
-  height: 1.6rem;
-  font-size: 1.1rem;
+  font-size: .9rem;
   padding: 0.1rem;
   border: 0.1rem solid var(--greyBorder);
   background-color: white;
@@ -144,7 +122,7 @@ button:hover {
 /* The colour box divs.--------------------------------- */
 .colourBox {
   width: 100%;
-  height: 15%;
+  height: 18%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,45 +133,35 @@ button:hover {
   background-color: white;
   border: 0.15rem solid black;
 }
-/* Body and Font size queries.-------------------------- */
-@media screen and (max-width: 850px) {
-  html {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 450px) {
-  html {
-    font-size: 9px;
-  }
-  button {
-    font-size: 2rem;
-  }
+/* Media Queries.------------------------------------- */
+@media screen and (max-width: 800px) {
+  html { font-size: 12px; }
+  .header { height: 15vh; }
+  .main { height: 83vh; }
 }
 @media screen and (max-width: 560px) {
-  body {
-    width: 100%;
+  body { width: 100%; }
+}
+@media screen and (max-width: 350px) {
+  html { font-size: 10px; }
+  .header { height: 15vh; }
+  .header h2 { font-size: 1.5rem; }
+  .main { height: 83vh; }
+}
+@media screen and (max-width: 400px) and (max-height: 700px) {
+  html { font-size: 10px; }
+  .header { height: 10vh; }
+  .header h1 { font-size: 2.3rem; }
+  .main { height: 88vh; }
+  .main button {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: .9rem;
+  }
+  .scrollItemDiv {
+    height: 2.5rem;
+  }
+  .scrollItemPara, .colourBox p, button {
+    font-size: 1.45rem;
   }
 }
-/* Header and grid section vh adjustments. ---------------- */
-/* @media screen and (max-width: 850px){
-   .header { height: 12vh; }
-   .main { height: 87vh; }
- }
- @media screen and (max-width: 450px){
-   .header { height: 10vh; }
-   .main { height: 90vh; }
- }
- @media screen and (max-width: 350px){
-   h1 { font-size: 2.75rem; }
-   h2 { font-size: 1.75rem; }
- }
- @media screen and (max-width: 304px){
-   .header { height: 13vh; }
-   .main { height: 87vh; }
- } */
-/* Scroll item text adjustments. ----------------------------- */
-/* @media screen and (max-width: 250px){
-   .scrollItemPara {
-     min-width: 50%;
-   }
- } */
