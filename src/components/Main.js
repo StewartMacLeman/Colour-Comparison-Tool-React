@@ -43,10 +43,10 @@ const Main = (props) => {
     <main className="main">
       <button className="topButton" data-resetbutton="top" onClick={reset}>Top Reset</button>
       <ScrollContainerTop colourNames={props.colourNames} updateColourBox={updateColourBox}/>
-      <ArrowContainer />
+      <ArrowContainer arrowDir="down"/>
       <ColourBox boxColour={topBoxColour} boxText={topBoxText}/>
       <ColourBox boxColour={bottomBoxColour} boxText={bottomBoxText}/>
-      <ArrowContainer />
+      <ArrowContainer arrowDir="up"/>
       <ScrollContainerBottom colourNames={props.colourNames} updateColourBox={updateColourBox}/>
       <button className="bottomButton" data-resetbutton="bottom" onClick={reset}>Bottom Reset</button>
     </main>

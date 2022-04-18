@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ArrowContainer = () => {
+const ArrowContainer = (props) => {
     return (
         <div className="arrowContainer">
-            <div>arrow!</div>
+            <div className={props.arrowDir}></div>
         </div>
     )
 }

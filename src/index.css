@@ -9,6 +9,7 @@ html {
 }
 :root {
   --greyBorder: rgba(128, 128, 128, 0.4);
+  --arrowSize: 1.15rem;
 }
 body {
   width: 80%;
@@ -71,8 +72,6 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* display: grid;
-   grid-template-rows: 6% 21% 3% 20% 20% 3% 21% 6%; */
 }
 .main button {
   padding: 0.15rem;
@@ -88,11 +87,9 @@ button:hover {
 .scrollContainer {
   width: 100%;
   height: 20%;
-  margin: 0.25rem auto;
+  margin: 0 auto;
   border: 0.15rem solid black;
   background-color: white;
-  /* position: relative;
-  z-index: 2; */
   overflow-y: scroll;
 }
 .scrollItemDiv {
@@ -126,24 +123,23 @@ button:hover {
 /* The arrow container divs.--------------------------- */
 .arrowContainer {
   width: 100%;
-  height: 5%;
+  height: var(--arrowSize);
   display: flex;
   justify-content: center;
 }
-.arrow {
-  height: 35px;
-  width: 35px;
-  background-color: black;
-}
 .down {
-  position: relative;
-  top: -141%;
-  transform: rotate(45deg);
+  width: 0; 
+  height: 0; 
+  border-left: var(--arrowSize) solid transparent;
+  border-right: var(--arrowSize) solid transparent;
+  border-top: var(--arrowSize) solid black;
 }
 .up {
-  position: relative;
-  top: 39%;
-  transform: rotate(45deg);
+  width: 0; 
+  height: 0; 
+  border-left: var(--arrowSize) solid transparent;
+  border-right: var(--arrowSize) solid transparent;
+  border-bottom: var(--arrowSize) solid black;
 }
 /* The colour box divs.--------------------------------- */
 .colourBox {
