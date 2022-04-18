@@ -1,18 +1,20 @@
 import React from "react";
-import ScrollContainer from "./ScrollContainer";
+import ScrollContainerTop from "./ScrollContainerTop";
+import ScrollContainerBottom from "./ScrollContainerBottom";
 import ColourBox from "./ColourBox";
 import ArrowContainer from "./ArrowContainer";
 
-const Main = () => {
+const Main = (props) => {
+  // let colourNamesReverse = props.colourNames.reverse();
   return (
     <main className="main">
       <button className="topButton">Top Reset</button>
-      <ScrollContainer />
+      <ScrollContainerTop colourNames={props.colourNames}/>
       <ArrowContainer />
       <ColourBox />
       <ColourBox />
       <ArrowContainer />
-      <ScrollContainer />
+      <ScrollContainerBottom colourNames={props.colourNames}/>
       <button className="bottomButton">Bottom Reset</button>
     </main>
   );
