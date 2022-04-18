@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ColourBox = () => {
+const ColourBox = (props) => {
     return (
-        <div className="colourBox">
-            <p>text!</p>
+        <div className="colourBox" style={{ backgroundColor: `${props.boxColour}` }}>
+            <p>Colour: {props.boxText}</p>
         </div>
     )
 }
